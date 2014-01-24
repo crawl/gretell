@@ -41,6 +41,12 @@ my $DEV_CHAN       = '##crawl-dev';
 my @stonefiles     = ('/var/lib/dgamelaunch/crawl-svn/saves/milestones',
                       '/var/lib/dgamelaunch/crawl-svn/saves/milestones-sprint',
                       '/var/lib/dgamelaunch/crawl-svn/saves/milestones-zotdef',
+                      '/srv/dgamelaunch/crawl-0.13/saves/milestones',
+                      '/srv/dgamelaunch/crawl-0.13/saves/milestones-sprint',
+                      '/srv/dgamelaunch/crawl-0.13/saves/milestones-zotdef',
+                      '/srv/dgamelaunch/crawl-0.12/saves/milestones',
+                      '/srv/dgamelaunch/crawl-0.12/saves/milestones-sprint',
+                      '/srv/dgamelaunch/crawl-0.12/saves/milestones-zotdef',
                       '/srv/dgamelaunch/crawl-0.11/saves/milestones',
                       '/srv/dgamelaunch/crawl-0.11/saves/milestones-sprint',
                       '/srv/dgamelaunch/crawl-0.11/saves/milestones-zotdef',
@@ -51,6 +57,12 @@ my @stonefiles     = ('/var/lib/dgamelaunch/crawl-svn/saves/milestones',
 my @logfiles       = ('/var/lib/dgamelaunch/crawl-svn/saves/logfile',
                       '/var/lib/dgamelaunch/crawl-svn/saves/logfile-sprint',
                       '/var/lib/dgamelaunch/crawl-svn/saves/logfile-zotdef',
+                      '/srv/dgamelaunch/crawl-0.13/saves/logfile',
+                      '/srv/dgamelaunch/crawl-0.13/saves/logfile-sprint',
+                      '/srv/dgamelaunch/crawl-0.13/saves/logfile-zotdef',
+                      '/srv/dgamelaunch/crawl-0.12/saves/logfile',
+                      '/srv/dgamelaunch/crawl-0.12/saves/logfile-sprint',
+                      '/srv/dgamelaunch/crawl-0.12/saves/logfile-zotdef',
                       '/srv/dgamelaunch/crawl-0.11/saves/logfile',
                       '/srv/dgamelaunch/crawl-0.11/saves/logfile-sprint',
                       '/srv/dgamelaunch/crawl-0.11/saves/logfile-zotdef',
@@ -469,7 +481,7 @@ sub cmd_monsterinfo {
   my ($m, $nick, $verbatim) = @_;
 
   my $monster_name = substr($verbatim, 2);
-  my $monster_info = `monster \Q$monster_name\E`;
+  my $monster_info = `monster-trunk \Q$monster_name\E`;
   post_message($m, $monster_info);
 }
 
@@ -641,6 +653,8 @@ sub show_dump_file($$) {
       'crawl-0.9' => '0.9',
       'crawl-0.10' => '0.10',
       'crawl-0.11' => '0.11',
+      'crawl-0.12' => '0.12',
+      'crawl-0.13' => '0.13',
       'crawl-anc' => 'ancient',
       'crawl-svn' => 'trunk' );
 
