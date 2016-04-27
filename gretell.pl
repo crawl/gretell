@@ -29,10 +29,12 @@ use File::Glob qw/:globally :nocase/;
 
 my $nickname       = 'Gretell';
 my $ircname        = 'Gretell the Crawl Bot';
+# my $ircserver      = 'irc.freenode.net';
 # my $ircserver      = 'barjavel.freenode.net';
 my $ircserver      = 'kornbluth.freenode.net';
 # my $ircserver      = 'bartol.freenode.net';
 # my $ircserver      = 'pratchett.freenode.net';
+#my $ircserver      = 'orwell.freenode.net';
 my $port           = 8001;
 my @CHANNELS       = ('##crawl', '##crawl-dev');
 my $ANNOUNCE_CHAN  = '##crawl';
@@ -40,47 +42,23 @@ my $DEV_CHAN       = '##crawl-dev';
 
 my @stonefiles     = ('/var/lib/dgamelaunch/crawl-svn/saves/milestones',
                       '/var/lib/dgamelaunch/crawl-svn/saves/milestones-sprint',
-                      '/var/lib/dgamelaunch/crawl-svn/saves/milestones-zotdef',
+                      '/srv/dgamelaunch/crawl-0.17/saves/milestones',
+                      '/srv/dgamelaunch/crawl-0.17/saves/milestones-sprint',
                       '/srv/dgamelaunch/crawl-0.16/saves/milestones',
                       '/srv/dgamelaunch/crawl-0.16/saves/milestones-sprint',
-                      '/srv/dgamelaunch/crawl-0.16/saves/milestones-zotdef',
                       '/srv/dgamelaunch/crawl-0.15/saves/milestones',
                       '/srv/dgamelaunch/crawl-0.15/saves/milestones-sprint',
-                      '/srv/dgamelaunch/crawl-0.15/saves/milestones-zotdef',
-                      '/srv/dgamelaunch/crawl-0.14/saves/milestones',
-                      '/srv/dgamelaunch/crawl-0.14/saves/milestones-sprint',
-                      '/srv/dgamelaunch/crawl-0.14/saves/milestones-zotdef',
-                      '/srv/dgamelaunch/crawl-0.13/saves/milestones',
-                      '/srv/dgamelaunch/crawl-0.13/saves/milestones-sprint',
-                      '/srv/dgamelaunch/crawl-0.13/saves/milestones-zotdef',
-                      '/srv/dgamelaunch/crawl-0.12/saves/milestones',
-                      '/srv/dgamelaunch/crawl-0.12/saves/milestones-sprint',
-                      '/srv/dgamelaunch/crawl-0.12/saves/milestones-zotdef',
-                      '/var/lib/dgamelaunch/crawl-0.10/saves/milestones',
-                      '/var/lib/dgamelaunch/crawl-0.10/saves/milestones-sprint',
-                      '/var/lib/dgamelaunch/crawl-0.10/saves/milestones-zotdef');
+                      '/srv/dgamelaunch/crawl-0.15/saves/milestones-zotdef');
 
 my @logfiles       = ('/var/lib/dgamelaunch/crawl-svn/saves/logfile',
                       '/var/lib/dgamelaunch/crawl-svn/saves/logfile-sprint',
-                      '/var/lib/dgamelaunch/crawl-svn/saves/logfile-zotdef',
+                      '/srv/dgamelaunch/crawl-0.17/saves/logfile',
+                      '/srv/dgamelaunch/crawl-0.17/saves/logfile-sprint',
                       '/srv/dgamelaunch/crawl-0.16/saves/logfile',
                       '/srv/dgamelaunch/crawl-0.16/saves/logfile-sprint',
-                      '/srv/dgamelaunch/crawl-0.16/saves/logfile-zotdef',
                       '/srv/dgamelaunch/crawl-0.15/saves/logfile',
                       '/srv/dgamelaunch/crawl-0.15/saves/logfile-sprint',
-                      '/srv/dgamelaunch/crawl-0.15/saves/logfile-zotdef',
-                      '/srv/dgamelaunch/crawl-0.14/saves/logfile',
-                      '/srv/dgamelaunch/crawl-0.14/saves/logfile-sprint',
-                      '/srv/dgamelaunch/crawl-0.14/saves/logfile-zotdef',
-                      '/srv/dgamelaunch/crawl-0.13/saves/logfile',
-                      '/srv/dgamelaunch/crawl-0.13/saves/logfile-sprint',
-                      '/srv/dgamelaunch/crawl-0.13/saves/logfile-zotdef',
-                      '/srv/dgamelaunch/crawl-0.12/saves/logfile',
-                      '/srv/dgamelaunch/crawl-0.12/saves/logfile-sprint',
-                      '/srv/dgamelaunch/crawl-0.12/saves/logfile-zotdef',
-                      '/var/lib/dgamelaunch/crawl-0.10/saves/logfile',
-                      '/var/lib/dgamelaunch/crawl-0.10/saves/logfile-sprint',
-                      '/var/lib/dgamelaunch/crawl-0.10/saves/logfile-zotdef');
+                      '/srv/dgamelaunch/crawl-0.15/saves/logfile-zotdef');
 
 my @announcefiles  = ('/home/services/crawl/source/announcements.log');
 
@@ -677,6 +655,7 @@ sub show_dump_file($$) {
       'crawl-0.14' => '0.14',
       'crawl-0.15' => '0.15',
       'crawl-0.16' => '0.16',
+      'crawl-0.17' => '0.17',
       'crawl-anc' => 'ancient',
       'crawl-svn' => 'trunk' );
 
