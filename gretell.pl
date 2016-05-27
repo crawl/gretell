@@ -42,23 +42,21 @@ my $DEV_CHAN       = '##crawl-dev';
 
 my @stonefiles     = ('/var/lib/dgamelaunch/crawl-svn/saves/milestones',
                       '/var/lib/dgamelaunch/crawl-svn/saves/milestones-sprint',
+                      '/srv/dgamelaunch/crawl-0.18/saves/milestones',
+                      '/srv/dgamelaunch/crawl-0.18/saves/milestones-sprint',
                       '/srv/dgamelaunch/crawl-0.17/saves/milestones',
                       '/srv/dgamelaunch/crawl-0.17/saves/milestones-sprint',
                       '/srv/dgamelaunch/crawl-0.16/saves/milestones',
-                      '/srv/dgamelaunch/crawl-0.16/saves/milestones-sprint',
-                      '/srv/dgamelaunch/crawl-0.15/saves/milestones',
-                      '/srv/dgamelaunch/crawl-0.15/saves/milestones-sprint',
-                      '/srv/dgamelaunch/crawl-0.15/saves/milestones-zotdef');
+                      '/srv/dgamelaunch/crawl-0.16/saves/milestones-sprint');
 
 my @logfiles       = ('/var/lib/dgamelaunch/crawl-svn/saves/logfile',
                       '/var/lib/dgamelaunch/crawl-svn/saves/logfile-sprint',
+                      '/srv/dgamelaunch/crawl-0.18/saves/logfile',
+                      '/srv/dgamelaunch/crawl-0.18/saves/logfile-sprint',
                       '/srv/dgamelaunch/crawl-0.17/saves/logfile',
                       '/srv/dgamelaunch/crawl-0.17/saves/logfile-sprint',
                       '/srv/dgamelaunch/crawl-0.16/saves/logfile',
-                      '/srv/dgamelaunch/crawl-0.16/saves/logfile-sprint',
-                      '/srv/dgamelaunch/crawl-0.15/saves/logfile',
-                      '/srv/dgamelaunch/crawl-0.15/saves/logfile-sprint',
-                      '/srv/dgamelaunch/crawl-0.15/saves/logfile-zotdef');
+                      '/srv/dgamelaunch/crawl-0.16/saves/logfile-sprint');
 
 my @announcefiles  = ('/home/services/crawl/source/announcements.log');
 
@@ -656,6 +654,7 @@ sub show_dump_file($$) {
       'crawl-0.15' => '0.15',
       'crawl-0.16' => '0.16',
       'crawl-0.17' => '0.17',
+      'crawl-0.18' => '0.18',
       'crawl-anc' => 'ancient',
       'crawl-svn' => 'trunk' );
 
