@@ -43,21 +43,15 @@ my $DEV_CHAN       = '#crawl-dev';
 
 my @stonefiles     = ('/var/lib/dgamelaunch/crawl-svn/saves/milestones',
                       '/var/lib/dgamelaunch/crawl-svn/saves/milestones-sprint',
-                      '/srv/dgamelaunch/crawl-0.18/saves/milestones',
-                      '/srv/dgamelaunch/crawl-0.18/saves/milestones-sprint',
-                      '/srv/dgamelaunch/crawl-0.17/saves/milestones',
-                      '/srv/dgamelaunch/crawl-0.17/saves/milestones-sprint',
-                      '/srv/dgamelaunch/crawl-0.16/saves/milestones',
-                      '/srv/dgamelaunch/crawl-0.16/saves/milestones-sprint');
+                      '/srv/dgamelaunch/crawl-0.26/saves/milestones',
+                      '/srv/dgamelaunch/crawl-0.25/saves/milestones',
+                      '/srv/dgamelaunch/crawl-0.24/saves/milestones');
 
 my @logfiles       = ('/var/lib/dgamelaunch/crawl-svn/saves/logfile',
                       '/var/lib/dgamelaunch/crawl-svn/saves/logfile-sprint',
-                      '/srv/dgamelaunch/crawl-0.18/saves/logfile',
-                      '/srv/dgamelaunch/crawl-0.18/saves/logfile-sprint',
-                      '/srv/dgamelaunch/crawl-0.17/saves/logfile',
-                      '/srv/dgamelaunch/crawl-0.17/saves/logfile-sprint',
-                      '/srv/dgamelaunch/crawl-0.16/saves/logfile',
-                      '/srv/dgamelaunch/crawl-0.16/saves/logfile-sprint');
+                      '/srv/dgamelaunch/crawl-0.26/saves/logfile',
+                      '/srv/dgamelaunch/crawl-0.25/saves/logfile',
+                      '/srv/dgamelaunch/crawl-0.24/saves/logfile');
 
 my @announcefiles  = ('/home/services/crawl/source/announcements.log');
 
@@ -646,18 +640,9 @@ sub show_dump_file($$) {
     $whereis_file =~ m{/(crawl-[\w.]+)[^/]*/morgue/(\w+)/+\w+[.]where};
 
   my %GAME_WEB_MAPPINGS =
-    ( 'crawl-0.7' => '0.7',
-      'crawl-0.8' => '0.8',
-      'crawl-0.9' => '0.9',
-      'crawl-0.10' => '0.10',
-      'crawl-0.11' => '0.11',
-      'crawl-0.12' => '0.12',
-      'crawl-0.13' => '0.13',
-      'crawl-0.14' => '0.14',
-      'crawl-0.15' => '0.15',
-      'crawl-0.16' => '0.16',
-      'crawl-0.17' => '0.17',
-      'crawl-0.18' => '0.18',
+    ( 'crawl-0.24' => '0.24',
+      'crawl-0.25' => '0.25',
+      'crawl-0.26' => '0.26',
       'crawl-anc' => 'ancient',
       'crawl-svn' => 'trunk' );
 
