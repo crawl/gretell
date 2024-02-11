@@ -166,6 +166,8 @@ sub newsworthy
 {
   my $g = shift;
 
+  return 0;
+
   # Milestone type, empty if this is not a milestone.
   my $type = $$g{type} || '';
   my $place_branch = game_place_branch($g);
