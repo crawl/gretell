@@ -29,16 +29,17 @@ use File::Glob qw/:globally :nocase/;
 
 my $nickname       = 'Gretell';
 my $ircname        = 'Gretell the Crawl Bot';
+my $ircserver      = 'irc.libera.chat';
 # my $ircserver      = 'irc.freenode.net';
 # my $ircserver      = 'barjavel.freenode.net';
-my $ircserver      = 'kornbluth.freenode.net';
+#my $ircserver      = 'kornbluth.freenode.net';
 # my $ircserver      = 'bartol.freenode.net';
 # my $ircserver      = 'pratchett.freenode.net';
 #my $ircserver      = 'orwell.freenode.net';
 my $port           = 8001;
-my @CHANNELS       = ('##crawl', '##crawl-dev');
-my $ANNOUNCE_CHAN  = '##crawl';
-my $DEV_CHAN       = '##crawl-dev';
+my @CHANNELS       = ('#crawl', '#crawl-dev', '#crawl-sequell');
+my $ANNOUNCE_CHAN  = '#crawl';
+my $DEV_CHAN       = '#crawl-dev';
 
 my @stonefiles     = ('/var/lib/dgamelaunch/crawl-svn/saves/milestones',
                       '/var/lib/dgamelaunch/crawl-svn/saves/milestones-sprint',
