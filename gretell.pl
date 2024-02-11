@@ -75,6 +75,20 @@ my %COMMANDS = (
   '@players' => \&cmd_players,
   '@??' => \&cmd_trunk_monsterinfo,
   '@?' => \&cmd_monsterinfo,
+  '@0.31?' => \&cmd_monsterinfo_0_31,
+  '@0.30?' => \&cmd_monsterinfo_0_30,
+  '@0.29?' => \&cmd_monsterinfo_0_29,
+  '@0.28?' => \&cmd_monsterinfo_0_28,
+  '@0.27?' => \&cmd_monsterinfo_0_27,
+  '@0.26?' => \&cmd_monsterinfo_0_26,
+  '@0.25?' => \&cmd_monsterinfo_0_25,
+  '@0.24?' => \&cmd_monsterinfo_0_24,
+  '@0.23?' => \&cmd_monsterinfo_0_23,
+  '@0.22?' => \&cmd_monsterinfo_0_22,
+  '@0.21?' => \&cmd_monsterinfo_0_21,
+  '@0.20?' => \&cmd_monsterinfo_0_20,
+  '@0.19?' => \&cmd_monsterinfo_0_19,
+  '@0.10?' => \&cmd_monsterinfo_0_10,
 );
 
 ## Daemonify. http://www.webreference.com/perl/tutorial/9/3.html
@@ -442,6 +456,11 @@ sub process_command($$$$) {
   {
 	$command = "@?";
   }
+  # Commands for previous versions.
+  elsif ($command =~ /^(\@0\.\d+\?)/)
+  {
+	$command = $1;
+  }
 
   my $proc = $COMMANDS{$command} or return;
   &$proc($m, $nick, $verbatim);
@@ -473,7 +492,119 @@ sub cmd_monsterinfo {
   my ($m, $nick, $verbatim) = @_;
 
   my $monster_name = substr($verbatim, 2);
-  my $monster_info = `monster-trunk \Q$monster_name\E`;
+  my $monster_info = `monster \Q$monster_name\E`;
+  post_message($m, $monster_info);
+}
+
+sub cmd_monsterinfo_0_31 {
+  my ($m, $nick, $verbatim) = @_;
+
+  my $monster_name = substr($verbatim, 6);
+  my $monster_info = `monster-0.31 \Q$monster_name\E`;
+  post_message($m, $monster_info);
+}
+
+sub cmd_monsterinfo_0_30 {
+  my ($m, $nick, $verbatim) = @_;
+
+  my $monster_name = substr($verbatim, 6);
+  my $monster_info = `monster-0.30 \Q$monster_name\E`;
+  post_message($m, $monster_info);
+}
+
+sub cmd_monsterinfo_0_29 {
+  my ($m, $nick, $verbatim) = @_;
+
+  my $monster_name = substr($verbatim, 6);
+  my $monster_info = `monster-0.29 \Q$monster_name\E`;
+  post_message($m, $monster_info);
+}
+
+sub cmd_monsterinfo_0_28 {
+  my ($m, $nick, $verbatim) = @_;
+
+  my $monster_name = substr($verbatim, 6);
+  my $monster_info = `monster-0.28 \Q$monster_name\E`;
+  post_message($m, $monster_info);
+}
+
+sub cmd_monsterinfo_0_27 {
+  my ($m, $nick, $verbatim) = @_;
+
+  my $monster_name = substr($verbatim, 6);
+  my $monster_info = `monster-0.27 \Q$monster_name\E`;
+  post_message($m, $monster_info);
+}
+
+sub cmd_monsterinfo_0_26 {
+  my ($m, $nick, $verbatim) = @_;
+
+  my $monster_name = substr($verbatim, 6);
+  my $monster_info = `monster-0.26 \Q$monster_name\E`;
+  post_message($m, $monster_info);
+}
+
+sub cmd_monsterinfo_0_25 {
+  my ($m, $nick, $verbatim) = @_;
+
+  my $monster_name = substr($verbatim, 6);
+  my $monster_info = `monster-0.25 \Q$monster_name\E`;
+  post_message($m, $monster_info);
+}
+
+sub cmd_monsterinfo_0_24 {
+  my ($m, $nick, $verbatim) = @_;
+
+  my $monster_name = substr($verbatim, 6);
+  my $monster_info = `monster-0.24 \Q$monster_name\E`;
+  post_message($m, $monster_info);
+}
+
+sub cmd_monsterinfo_0_23 {
+  my ($m, $nick, $verbatim) = @_;
+
+  my $monster_name = substr($verbatim, 6);
+  my $monster_info = `monster-0.23 \Q$monster_name\E`;
+  post_message($m, $monster_info);
+}
+
+sub cmd_monsterinfo_0_22 {
+  my ($m, $nick, $verbatim) = @_;
+
+  my $monster_name = substr($verbatim, 6);
+  my $monster_info = `monster-0.22 \Q$monster_name\E`;
+  post_message($m, $monster_info);
+}
+
+sub cmd_monsterinfo_0_21 {
+  my ($m, $nick, $verbatim) = @_;
+
+  my $monster_name = substr($verbatim, 6);
+  my $monster_info = `monster-0.21 \Q$monster_name\E`;
+  post_message($m, $monster_info);
+}
+
+sub cmd_monsterinfo_0_20 {
+  my ($m, $nick, $verbatim) = @_;
+
+  my $monster_name = substr($verbatim, 6);
+  my $monster_info = `monster-0.20 \Q$monster_name\E`;
+  post_message($m, $monster_info);
+}
+
+sub cmd_monsterinfo_0_19 {
+  my ($m, $nick, $verbatim) = @_;
+
+  my $monster_name = substr($verbatim, 6);
+  my $monster_info = `monster-0.19 \Q$monster_name\E`;
+  post_message($m, $monster_info);
+}
+
+sub cmd_monsterinfo_0_10 {
+  my ($m, $nick, $verbatim) = @_;
+
+  my $monster_name = substr($verbatim, 6);
+  my $monster_info = `monster-0.10 \Q$monster_name\E`;
   post_message($m, $monster_info);
 }
 
