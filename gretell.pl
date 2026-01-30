@@ -75,6 +75,7 @@ my %COMMANDS = (
   '@players' => \&cmd_players,
   '@??' => \&cmd_trunk_monsterinfo,
   '@?' => \&cmd_monsterinfo,
+  '@0.33?' => \&cmd_monsterinfo_0_33,
   '@0.32?' => \&cmd_monsterinfo_0_32,
   '@0.31?' => \&cmd_monsterinfo_0_31,
   '@0.30?' => \&cmd_monsterinfo_0_30,
@@ -494,6 +495,14 @@ sub cmd_monsterinfo {
 
   my $monster_name = substr($verbatim, 2);
   my $monster_info = `monster \Q$monster_name\E`;
+  post_message($m, $monster_info);
+}
+
+sub cmd_monsterinfo_0_33 {
+  my ($m, $nick, $verbatim) = @_;
+
+  my $monster_name = substr($verbatim, 6);
+  my $monster_info = `monster-0.33 \Q$monster_name\E`;
   post_message($m, $monster_info);
 }
 
